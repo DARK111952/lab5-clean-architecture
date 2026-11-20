@@ -8,8 +8,8 @@ import '../../domain/repositories/ad_repository.dart';
 class JsonAdRepository implements AdRepository {
   JsonAdRepository(String source) {
     final data = jsonDecode(source) as Map<String, dynamic>;
-    _categories = List<String>.from(data['categories'] as List);
-    _ads = [
+    _categories = List.unmodifiable(List<String>.from(data['categories'] as List));
+    _ads = List.unmodifiable([
       for (final item in data['ads'] as List)
         Ad(
           id: item['id'] as int,
@@ -19,7 +19,7 @@ class JsonAdRepository implements AdRepository {
           time: item['time'] as String,
           iconKey: item['iconKey'] as String,
         ),
-    ];
+    ]);
   }
 
   late final List<String> _categories;
