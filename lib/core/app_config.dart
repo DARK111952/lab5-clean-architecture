@@ -9,5 +9,6 @@ class AppConfig {
   static const String storage = 'memory';
 
   /// Верхня межа фільтра ціни (за вимогою замовника — до 30 000).
+  /// Найдорожче оголошення в тестових даних — 21 000, тому межа з запасом.
   static const double maxPrice = 30000;
 }
