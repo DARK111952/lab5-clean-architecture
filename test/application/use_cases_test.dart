@@ -1,5 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lab5_clean_architecture/application/use_cases/favorites_use_cases.dart';
+import 'package:lab5_clean_architecture/application/use_cases/clear_favorites_use_case.dart';
+import 'package:lab5_clean_architecture/application/use_cases/get_favorites_use_case.dart';
+import 'package:lab5_clean_architecture/application/use_cases/toggle_favorite_use_case.dart';
 import 'package:lab5_clean_architecture/application/use_cases/get_categories_use_case.dart';
 import 'package:lab5_clean_architecture/application/use_cases/search_ads_use_case.dart';
 import 'package:lab5_clean_architecture/domain/entities/ad.dart';
