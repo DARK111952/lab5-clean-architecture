@@ -7,7 +7,7 @@ class AdFilter {
     this.category,
     required this.minPrice,
     required this.maxPrice,
-  });
+  }) : assert(minPrice <= maxPrice, 'minPrice не може перевищувати maxPrice');
 
   final String query;
   final String? category;
