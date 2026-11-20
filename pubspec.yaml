@@ -1,0 +1,21 @@
+name: lab5_clean_architecture
+description: "Лабораторна робота №5. Clean Architecture та Git (варіант 13, маркетплейс оголошень)."
+publish_to: "none"
+version: 2.0.0+3
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
