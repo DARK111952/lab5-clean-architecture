@@ -16,11 +16,11 @@ class SearchNotifier extends ChangeNotifier {
     this.minPrice = 0,
     required this.maxPrice,
   })  : _searchAds = searchAds,
-        _getCategories = getCategories,
+        _categories = getCategories(),
         _price = RangeValues(minPrice, maxPrice);
 
   final SearchAdsUseCase _searchAds;
-  final GetCategoriesUseCase _getCategories;
+  final List<String> _categories;
 
   final double minPrice;
   final double maxPrice;
@@ -33,7 +33,7 @@ class SearchNotifier extends ChangeNotifier {
   String get query => _query;
   String? get category => _category;
   RangeValues get price => _price;
-  List<String> get categories => _getCategories();
+  List<String> get categories => _categories;
 
   bool get priceFilterActive => _price.start > minPrice || _price.end < maxPrice;
 
